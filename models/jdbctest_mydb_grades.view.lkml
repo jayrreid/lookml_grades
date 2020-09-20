@@ -61,7 +61,7 @@ view: grades {
     type: average
     value_format_name: decimal_2
     sql: ${avg_test_score} ;;
-    drill_fields: [firstname, lastname, ssn, grade,test1, test2, test3, test4]
+    drill_fields: [firstname, lastname, ssn, grade,test1, test2, test3, test4,avg_test_score]
   }
 
   measure: average_final {
