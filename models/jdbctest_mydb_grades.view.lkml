@@ -46,9 +46,22 @@ view: grades {
     sql: ${TABLE}.test4 ;;
   }
 
+  dimension: avg_test_score {
+    type:  number
+    sql:  (${TABLE}.test1 + ${TABLE}.test2 + ${TABLE}.test3 + ${TABLE}.test4) / 4 ;;
+
+  }
+
   measure: count {
     type: count
     drill_fields: [firstname, lastname]
+  }
+
+  measure: average_test_scores {
+    type: average
+    value_format_name: decimal_2
+    sql: ${avg_test_score} ;;
+    drill_fields: [firstname, lastname, ssn, grade,test1, test2, test3, test4]
   }
 
   measure: average_final {
@@ -57,4 +70,6 @@ view: grades {
     sql: ${final} ;;
     drill_fields: [firstname, lastname, ssn, grade,final]
   }
+
+
 }
