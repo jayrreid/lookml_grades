@@ -54,7 +54,7 @@ view: grades {
   measure: average_grade {
     type: average
     value_format_name: decimal_2
-    sql: ${grade} ;;
+    sql: ${final} ;;
     drill_fields: [firstname, lastname, ssn, grade]
   }
 }
