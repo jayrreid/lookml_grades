@@ -55,6 +55,6 @@ view: grades {
     type: average
     value_format_name: decimal_2
     sql: ${final} ;;
-    drill_fields: [firstname, lastname, ssn, grade]
+    drill_fields: [firstname, lastname, ssn, grade,final]
   }
 }
