@@ -1,4 +1,4 @@
-view: jdbctest_mydb_grades {
+view: grades {
   sql_table_name: lake_formation_schema.jdbctest_mydb_grades ;;
 
   dimension: final {
